@@ -4,8 +4,8 @@ Spēles mērķis ir atrast un novietot katru automašīnas attēlu tam paredzēt
 Spēles laikā tiek uzņemts laiks, lai sasniegtu labāku rezultātu attēlu ievietošana ir jāveic pēč iespējas ātrāk.
 
 **Darāmo darbu saraksts:**
-- [ ] Izkārtot spēles laukumu (karte) un izvietot automašīnas
-- [ ] Izstrādāt DragAndDrop skriptu
+- [x] Izkārtot spēles laukumu (karte) un izvietot automašīnas
+- [x] Izstrādāt DragAndDrop skriptu
 - [ ] Ieviest skaņas efektus un mūziku
 - [ ] Izstrādāt Transformācijas skriptu (izmērs, rotācija)
 - [ ] Izstrādāt kameras skriptu (pietuvināt/attālināt)
