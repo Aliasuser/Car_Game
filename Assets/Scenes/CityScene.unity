@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 311268295}
   - component: {fileID: 311268297}
   - component: {fileID: 311268296}
+  - component: {fileID: 311268298}
   m_Layer: 5
   m_Name: GarbageTruckPlace
   m_TagString: Garbage
@@ -326,6 +327,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311268294}
   m_CullTransparentMesh: 1
+--- !u!114 &311268298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311268294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab6d646177caaa43a92b6c8636f7232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectScript: {fileID: 1532523587}
 --- !u!1 &496807366
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +351,7 @@ GameObject:
   - component: {fileID: 496807367}
   - component: {fileID: 496807369}
   - component: {fileID: 496807368}
+  - component: {fileID: 496807370}
   m_Layer: 5
   m_Name: AmbulancePlace
   m_TagString: Medic
@@ -401,6 +416,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496807366}
   m_CullTransparentMesh: 1
+--- !u!114 &496807370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496807366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab6d646177caaa43a92b6c8636f7232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectScript: {fileID: 1532523587}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +440,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -494,6 +523,22 @@ Transform:
   - {fileID: 1572198619}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae3902ceb75f7f438e090c43dabff09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxZoom: 300
+  minZoom: 150
+  followSpeed: 5
+  cam: {fileID: 519420031}
 --- !u!1 &542710676
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +550,8 @@ GameObject:
   - component: {fileID: 542710677}
   - component: {fileID: 542710679}
   - component: {fileID: 542710678}
+  - component: {fileID: 542710680}
+  - component: {fileID: 542710681}
   m_Layer: 5
   m_Name: GarbageTruck
   m_TagString: Garbage
@@ -569,6 +616,160 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542710676}
   m_CullTransparentMesh: 1
+--- !u!114 &542710680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542710676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551b13be1e4b17c41978900523ae57c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canva: {fileID: 1572198622}
+  objectScript: {fileID: 1532523587}
+--- !u!225 &542710681
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542710676}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!1 &1101428443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101428445}
+  - component: {fileID: 1101428444}
+  m_Layer: 0
+  m_Name: SoundEffects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1101428444
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101428443}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1101428445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101428443}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 879.7028, y: 478.63165, z: 4.647749}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1201770473
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +781,8 @@ GameObject:
   - component: {fileID: 1201770474}
   - component: {fileID: 1201770476}
   - component: {fileID: 1201770475}
+  - component: {fileID: 1201770477}
+  - component: {fileID: 1201770478}
   m_Layer: 5
   m_Name: Ambulance
   m_TagString: Medic
@@ -644,6 +847,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201770473}
   m_CullTransparentMesh: 1
+--- !u!114 &1201770477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201770473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551b13be1e4b17c41978900523ae57c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canva: {fileID: 1572198622}
+  objectScript: {fileID: 1532523587}
+--- !u!225 &1201770478
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201770473}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1287364648
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +884,7 @@ GameObject:
   - component: {fileID: 1287364649}
   - component: {fileID: 1287364651}
   - component: {fileID: 1287364650}
+  - component: {fileID: 1287364652}
   m_Layer: 5
   m_Name: SchoolBusPlace
   m_TagString: School
@@ -719,6 +949,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287364648}
   m_CullTransparentMesh: 1
+--- !u!114 &1287364652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287364648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab6d646177caaa43a92b6c8636f7232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectScript: {fileID: 1532523587}
 --- !u!1 &1365995850
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +1030,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1532523585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532523588}
+  - component: {fileID: 1532523587}
+  - component: {fileID: 1532523589}
+  m_Layer: 0
+  m_Name: ScriptHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1532523587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532523585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0813533c861f9149af49cdc779cd0cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  garbageTruck: {fileID: 542710676}
+  schoolBus: {fileID: 1787294157}
+  ambulance: {fileID: 1201770473}
+  gTruckPos: {x: 0, y: 0}
+  sBusPos: {x: 0, y: 0}
+  ambulancePos: {x: 0, y: 0}
+  audioSource: {fileID: 1101428444}
+  audioClips:
+  - {fileID: 8300000, guid: 0c7514480c313584eaf945c7a0bb6266, type: 3}
+  - {fileID: 8300000, guid: 6909381136303064bbae9cace6f4bdbb, type: 3}
+  - {fileID: 8300000, guid: 843ea926cf7f73444a08305e1cd04dd2, type: 3}
+  - {fileID: 8300000, guid: 431f30143f31ce843882fa600ab07b2e, type: 3}
+  - {fileID: 8300000, guid: c289fc9d7c2608d499af8d1a56ae79ab, type: 3}
+  rightPlace: 0
+  lastDragged: {fileID: 0}
+--- !u!4 &1532523588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532523585}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 879.7028, y: 478.63165, z: 4.647749}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1532523589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532523585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b95b2e6da0e874393a2b69f0277c8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectScript: {fileID: 1532523587}
 --- !u!1 &1543918068
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +1297,8 @@ GameObject:
   - component: {fileID: 1787294158}
   - component: {fileID: 1787294160}
   - component: {fileID: 1787294159}
+  - component: {fileID: 1787294161}
+  - component: {fileID: 1787294162}
   m_Layer: 5
   m_Name: SchoolBus
   m_TagString: School
@@ -995,13 +1313,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787294157}
-  m_LocalRotation: {x: -0, y: -0, z: 0.11964243, w: 0.9928171}
+  m_LocalRotation: {x: -0, y: -0, z: 0.10958655, w: 0.99397725}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1572198619}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 13.743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 12.583}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 695, y: 473}
@@ -1045,6 +1363,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787294157}
   m_CullTransparentMesh: 1
+--- !u!114 &1787294161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787294157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551b13be1e4b17c41978900523ae57c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canva: {fileID: 1572198622}
+  objectScript: {fileID: 1532523587}
+--- !u!225 &1787294162
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787294157}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1052,3 +1396,5 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1365995853}
   - {fileID: 42295975}
+  - {fileID: 1532523588}
+  - {fileID: 1101428445}
