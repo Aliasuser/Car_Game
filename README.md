@@ -11,7 +11,7 @@ Spēles laikā tiek uzņemts laiks, lai sasniegtu labāku rezultātu attēlu iev
 - [x] Ievietotas vairākas mašīnas attēli, audio un pievienoti skripti
 - [ ] Izstrādāt kameras skriptu (pietuvināt/attālināt)
 - [x] Izstrādāt sākuma ainu
-- [ ] Ieviest taimeri
+- [x] Ieviest taimeri
 - [ ] Izstrādāt uzvaras logu un zvaigžņu sistēmu
 - [ ] Papildināt spēles loģiku
 - [ ] Izstrādāt otro līmeni
