@@ -28,7 +28,7 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                 ySizeDif = Mathf.Abs(placeSize.y - carSize.y);
                 Debug.Log("Dif X Size: " + xSizeDif + "\nDif Y Size: " + ySizeDif);
 
-                if((difZRotation <=10 || (difZRotation >= 350 && difZRotation <= 360)) && (xSizeDif <= 0.3 && ySizeDif <= 0.3)){
+                if((difZRotation <=5 || (difZRotation >= 355 && difZRotation <= 360)) && (xSizeDif <= 0.1 && ySizeDif <= 0.1)){
                     Debug.Log("Right Place");
                     objectScript.rightPlace = true;
                     //Izcentre poziciju
@@ -47,6 +47,33 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                             break;
                         case "School":
                             objectScript.audioSource.PlayOneShot(objectScript.audioClips[3]);
+                            break;
+                        case "Cement":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[10]);
+                            break;
+                        case "Police":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[12]);
+                            break;
+                        case "Tractor":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[7]);
+                            break;
+                        case "Fire":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[11]);
+                            break;
+                        case "Excavator":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[8]);
+                            break;
+                        case "Tractor2":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[13]);
+                            break;
+                        case "E46":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[5]);
+                            break;
+                        case "E61":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[11]);
+                            break;
+                        case "B2":
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[6]);
                             break;
                         default:
                             Debug.LogError("Unknown tag!");
