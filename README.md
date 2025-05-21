@@ -12,8 +12,9 @@ Spēles laikā tiek uzņemts laiks, lai sasniegtu labāku rezultātu attēlu iev
 - [ ] Izstrādāt kameras skriptu (pietuvināt/attālināt)
 - [x] Izstrādāt sākuma ainu
 - [x] Ieviest taimeri
-- [ ] Izstrādāt uzvaras logu un zvaigžņu sistēmu
-- [ ] Papildināt spēles loģiku
-- [ ] Izstrādāt otro līmeni
+- [x] Izstrādāt uzvaras logu un zvaigžņu sistēmu
+- [x] Papildināt spēles loģiku
+- [x] Izstrādāt otro līmeni un ievietot attēlus
+- [ ] Papildināt otro līmeni ar audio, skriptiem
 
 

@@ -98,6 +98,33 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                     case "School":
                         objectScript.schoolBus.GetComponent<RectTransform>().localPosition = objectScript.sBusPos;
                         break;
+                    case "Cement":
+                        objectScript.cementTruck.GetComponent<RectTransform>().localPosition = objectScript.cementTruckPos;
+                        break;
+                    case "Police":
+                        objectScript.police.GetComponent<RectTransform>().localPosition = objectScript.policePos;
+                        break;
+                    case "Tractor":
+                        objectScript.tractor.GetComponent<RectTransform>().localPosition = objectScript.tractorPos;
+                        break;
+                    case "Fire":
+                        objectScript.fireTruck.GetComponent<RectTransform>().localPosition = objectScript.fireTruckPos;
+                        break;
+                    case "Excavator":
+                        objectScript.excavator.GetComponent<RectTransform>().localPosition = objectScript.excavatorPos;
+                        break;
+                    case "Tractor2":
+                        objectScript.tractor2.GetComponent<RectTransform>().localPosition = objectScript.tractor2Pos;
+                        break;
+                    case "E46":
+                        objectScript.E46.GetComponent<RectTransform>().localPosition = objectScript.E46Pos;
+                        break;
+                    case "E61":
+                        objectScript.E61.GetComponent<RectTransform>().localPosition = objectScript.E61Pos;
+                        break;
+                    case "B2":
+                        objectScript.B2.GetComponent<RectTransform>().localPosition = objectScript.B2Pos;
+                        break;
                     default:
                         Debug.LogError("Unknown tag!");
                         break;

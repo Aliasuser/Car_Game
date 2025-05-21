@@ -16,6 +16,13 @@ TagManager:
   - E46
   - B2
   - E61
+  - Convertible
+  - Tow
+  - Oppressor
+  - Horse
+  - Lamborghini
+  - Luxury
+  - Pickup
   layers:
   - Default
   - TransparentFX
