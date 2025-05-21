@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectScript : MonoBehaviour
 {
+    //Sagatavo mašīnas mainīgos
     public GameObject garbageTruck;
     public GameObject schoolBus;
     public GameObject ambulance;
@@ -17,6 +18,7 @@ public class ObjectScript : MonoBehaviour
     public GameObject E61;
     public GameObject B2;
 
+    //Sagatavo mašīnas pozīcijas
     [HideInInspector]
     public Vector2 gTruckPos;
     [HideInInspector]
@@ -42,6 +44,7 @@ public class ObjectScript : MonoBehaviour
     [HideInInspector]
     public Vector2 B2Pos;
 
+    //Ievieša audio un mašīnas pārbaudes mainīgos
     public AudioSource audioSource;
     public AudioClip[] audioClips;
     [HideInInspector]
@@ -49,7 +52,7 @@ public class ObjectScript : MonoBehaviour
     public GameObject lastDragged = null;
 
     // Start is called before the first frame update
-    void Start()
+    void Start() // Iegūst mašīnas pašreizējo pozīciju
     {
         gTruckPos = garbageTruck.GetComponent<RectTransform>().localPosition;
         sBusPos = schoolBus.GetComponent<RectTransform>().localPosition;

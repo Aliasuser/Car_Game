@@ -1,9 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class WinnerScript : MonoBehaviour
 {
+    //Sagatavo mainīgos
     public GameObject winnerBackground;
     public GameObject winnerLogo;
     public Text timeVictoryText;
@@ -16,6 +18,7 @@ public class WinnerScript : MonoBehaviour
     public List<GameObject> targetPos = new List<GameObject>();
     public GameObject Back;
     public GameObject Retry;
+    public AudioSource audioSource;
 
     private float startTime;
     private bool timerRunning = false;
@@ -23,6 +26,7 @@ public class WinnerScript : MonoBehaviour
 
     public void Start()
     {
+        //Paslēpj uzvaras logu sākumā
         winnerBackground.SetActive(false);
         winnerLogo.SetActive(false);
         timeVictoryText.gameObject.SetActive(false);
@@ -33,18 +37,19 @@ public class WinnerScript : MonoBehaviour
         Back.gameObject.SetActive(false);
         Retry.gameObject.SetActive(false);
 
-        startTime = Time.time;
-        timerRunning = true;
+        startTime = Time.time; //Uzstāda sākuma laiku
+        timerRunning = true; // Uzsāk taimeri
     }
 
     public void Update()
     {
+        //Pārbauda vai taimeris vēl iet, tad aprēķina laiku
         if (timerRunning)
         {
             endTime = Time.time - startTime;
             timeVictoryText.text = FormatTime(endTime);
             timeGameText.text = FormatTime(endTime);
-            if (CheckVeh())
+            if (VehicleChecker()) //Pārbauda vai mašīnas ir saliktas pareizās vietās, apstādinat taimeri un parāda uzvaras logu
             {
                 timerRunning = false;
                 ShowWinScreen();
@@ -52,7 +57,7 @@ public class WinnerScript : MonoBehaviour
         }
     }
 
-    public bool CheckVeh()
+    public bool VehicleChecker() //Salīdzina mašīnas un mašīnas pozīcijas ar pareizām vietām
     {
         for (int i = 0; i < carObjects.Count; i++)
         {
@@ -65,7 +70,7 @@ public class WinnerScript : MonoBehaviour
         return true;
     }
 
-    void ShowWinScreen()
+    void ShowWinScreen() //Parāda uzvaras logu
     {
         winnerBackground.SetActive(true);
         winnerLogo.SetActive(true);
@@ -73,11 +78,14 @@ public class WinnerScript : MonoBehaviour
         Texts.gameObject.SetActive(true);
         Back.gameObject.SetActive(true);
         Retry.gameObject.SetActive(true);
-        if (endTime <= 60f)
+
+        
+
+        if (endTime <= 60f) //Pārbauda kāds ir laiks un cik zvaigznes lietotājs iegūst
         {
             star3.SetActive(true);
         }
-        else if (endTime <= 80)
+        else if (endTime <= 90)
         {
             star2.SetActive(true);
         }
@@ -85,9 +93,12 @@ public class WinnerScript : MonoBehaviour
         {
             star1.SetActive(true);
         }
+
+        audioSource.Play(); //Atskaņo uzvaras audio
+
     }
 
-    string FormatTime(float timeInS)
+    string FormatTime(float timeInS) //Formatē taimera laiku redzāmākā veidā
     {
         int s = Mathf.FloorToInt(timeInS);
         int ms = Mathf.FloorToInt((timeInS - s) * 100);

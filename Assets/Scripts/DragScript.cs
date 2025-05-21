@@ -1,11 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,IDragHandler, IEndDragHandler
 {
-
+    //Uzstāda mainīgos
     private RectTransform rectTransform;
     public Canvas canva;
     private CanvasGroup canvasGroup;
@@ -18,7 +18,7 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData) //Atskaņo audio, kad uzspiež uz kādas mašīnas
     {
         if (Input.GetMouseButton(0) && Input.GetMouseButton(2) == false)
         {
@@ -28,7 +28,7 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
 
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    public void OnBeginDrag(PointerEventData eventData) //Kad sāk vilkt mašīnas, parāda pataisot mašīnas caurspīdīgas
     {
         if (Input.GetMouseButton(0) && Input.GetMouseButton(2) == false)
         {
@@ -42,7 +42,7 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
 
     
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnDrag(PointerEventData eventData) //Ļauj vilkt mašīnas tikai par redzamo ekrānu
     {
         Debug.Log("Dragging: " + gameObject.name);
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -53,7 +53,7 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
         transform.position = mousePosition;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public void OnEndDrag(PointerEventData eventData) //Beidzot vilkšanu uzstāda vērtības un pārbauda vai ir pareizā vietā
     {
         if (Input.GetMouseButtonUp(0))
         {
@@ -68,7 +68,7 @@ public class DragScript : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
             else
             {
                 objectScript.lastDragged = null;
-                // Velak parbaudit vai masinas ir sava vieta
+                
             }
             objectScript.rightPlace = false;
         }

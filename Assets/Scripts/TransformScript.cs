@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,17 +9,17 @@ public class TransformScript : MonoBehaviour
     void Update()
     {
         if(objectScript.lastDragged != null) { 
-            if(Input.GetKey(KeyCode.Z))
+            if(Input.GetKey(KeyCode.Z)) // Ļauj pagriezt mašīnu uz leju
             {
                 objectScript.lastDragged.GetComponent<RectTransform>().transform.Rotate(0, 0, Time.deltaTime * 20f);
             }
 
-            if (Input.GetKey(KeyCode.X))
+            if (Input.GetKey(KeyCode.X)) // Ļauj pagriezt mašīnu uz augšu
             {
                 objectScript.lastDragged.GetComponent<RectTransform>().transform.Rotate(0, 0, -Time.deltaTime * 20f);
             }
 
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow)) //Paaugstina mašīnu
             {
                 if (objectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y < 1.5f)
                 {
@@ -29,7 +29,7 @@ public class TransformScript : MonoBehaviour
                 }
             }
 
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.DownArrow)) //Pazemina mašīnu
             {
                 if (objectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.y > 0.5f)
                 {
@@ -39,7 +39,7 @@ public class TransformScript : MonoBehaviour
                 }
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow)) //Saspiež mašīnu
             {
                 if (objectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x > 0.5f)
                 {
@@ -49,7 +49,7 @@ public class TransformScript : MonoBehaviour
                 }
             }
 
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow)) //Palielina mašīnu
             {
                 if (objectScript.lastDragged.GetComponent<RectTransform>().transform.localScale.x < 1.5f)
                 {

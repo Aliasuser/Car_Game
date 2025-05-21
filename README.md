@@ -8,13 +8,12 @@ Spēles laikā tiek uzņemts laiks, lai sasniegtu labāku rezultātu attēlu iev
 - [x] Izstrādāt DragAndDrop skriptu
 - [x] Ieviest skaņas efektus un mūziku
 - [x] Izstrādāt Transformācijas skriptu (izmērs, rotācija)
-- [x] Ievietotas vairākas mašīnas attēli, audio un pievienoti skripti
-- [ ] Izstrādāt kameras skriptu (pietuvināt/attālināt)
+- [x] Ievietotas vairāki mašīnas attēli, audio un pievienoti skripti
 - [x] Izstrādāt sākuma ainu
 - [x] Ieviest taimeri
 - [x] Izstrādāt uzvaras logu un zvaigžņu sistēmu
 - [x] Papildināt spēles loģiku
-- [x] Izstrādāt otro līmeni un ievietot attēlus
-- [ ] Papildināt otro līmeni ar audio, skriptiem
+- [x] Izstrādāt otro līmeni un ievietot jaunus attēlus
+- [x] Papildināt otro līmeni ar audio, skriptiem
 
 

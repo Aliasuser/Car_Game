@@ -1,16 +1,16 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class PlaceScript : MonoBehaviour, IDropHandler
 {
-
+    //Uzstāda mašīnas salīdzināšas mainīgos
     private float placeZRotation, carZRotation, difZRotation;
     private Vector2 placeSize, carSize;
     private float xSizeDif, ySizeDif;
     public ObjectScript objectScript;
-    public void OnDrop(PointerEventData eventData)
+    public void OnDrop(PointerEventData eventData) // Pārbauda vai mašīna tiek vilkta un dabū rotāciju, izmēru un atšķirību
     {
        if((eventData.pointerDrag != null) && Input.GetMouseButtonUp(0) && Input.GetMouseButton(2) == false)
         {
@@ -28,7 +28,7 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                 ySizeDif = Mathf.Abs(placeSize.y - carSize.y);
                 Debug.Log("Dif X Size: " + xSizeDif + "\nDif Y Size: " + ySizeDif);
 
-                if((difZRotation <=5 || (difZRotation >= 355 && difZRotation <= 360)) && (xSizeDif <= 0.1 && ySizeDif <= 0.1)){
+                if((difZRotation <=10 || (difZRotation >= 350 && difZRotation <= 360)) && (xSizeDif <= 0.1 && ySizeDif <= 0.1)){
                     Debug.Log("Right Place");
                     objectScript.rightPlace = true;
                     //Izcentre poziciju
@@ -37,7 +37,7 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                     eventData.pointerDrag.GetComponent<RectTransform>().localRotation = GetComponent<RectTransform>().localRotation;
                     //Pielago izmeru
                     eventData.pointerDrag.GetComponent<RectTransform>().localScale = GetComponent<RectTransform>().localScale;
-                    switch (eventData.pointerDrag.tag)
+                    switch (eventData.pointerDrag.tag) // Atskaņo audio failus, kad mašīnas tiek ievietotas pareizās vietās
                     {
                         case "Garbage":
                             objectScript.audioSource.PlayOneShot(objectScript.audioClips[2]);
@@ -58,7 +58,7 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                             objectScript.audioSource.PlayOneShot(objectScript.audioClips[7]);
                             break;
                         case "Fire":
-                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[11]);
+                            objectScript.audioSource.PlayOneShot(objectScript.audioClips[9]);
                             break;
                         case "Excavator":
                             objectScript.audioSource.PlayOneShot(objectScript.audioClips[8]);
@@ -82,12 +82,12 @@ public class PlaceScript : MonoBehaviour, IDropHandler
                 }
 
             }
-            else
+            else //Pārliecinas, ka mašīna nav pareizā vietā un atskaņo error audio
             {
                 objectScript.rightPlace = false;
                 objectScript.audioSource.PlayOneShot(objectScript.audioClips[1]);
 
-                switch (eventData.pointerDrag.tag)
+                switch (eventData.pointerDrag.tag) //Atgriež mašīnas ja nav pareizajās vietās, pārbaude
                 {
                     case "Garbage":
                         objectScript.garbageTruck.GetComponent<RectTransform>().localPosition = objectScript.gTruckPos;
