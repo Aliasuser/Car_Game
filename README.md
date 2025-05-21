@@ -1,9 +1,9 @@
 # Car_Game
-Otrais Unity 2D projekts.
-Spēles mērķis ir atrast un novietot katru automašīnas attēlu tam paredzētajā vietā, izmērā un rotācijā.
-Spēles laikā tiek uzņemts laiks, lai sasniegtu labāku rezultātu attēlu ievietošana ir jāveic pēč iespējas ātrāk.
+**Otrais Unity 2D projekts.**
+**Spēles mērķis ir atrast un novietot katru automašīnas attēlu tam paredzētajā vietā, izmērā un rotācijā.**
+**Spēles laikā tiek uzņemts laiks, lai sasniegtu labāku rezultātu attēlu ievietošana ir jāveic pēč iespējas ātrāk.**
 
-**Darāmo darbu saraksts:**
+## **Darāmo darbu saraksts:**
 - [x] Izkārtot spēles laukumu (karte) un izvietot automašīnas
 - [x] Izstrādāt DragAndDrop skriptu
 - [x] Ieviest skaņas efektus un mūziku
@@ -15,5 +15,15 @@ Spēles laikā tiek uzņemts laiks, lai sasniegtu labāku rezultātu attēlu iev
 - [x] Papildināt spēles loģiku
 - [x] Izstrādāt otro līmeni un ievietot jaunus attēlus
 - [x] Papildināt otro līmeni ar audio, skriptiem
+      
+> **Spēles sākumekrāns**
+![image](https://github.com/user-attachments/assets/a2d0f4d6-df69-467e-abcc-1e52d384a3da)
+#
+> **Spēles pirmais līmenis**
+![image](https://github.com/user-attachments/assets/387bd907-2183-4bc3-9a7a-2ee258b9c839)
+#
+> **Spēles otrais līmenis**
+![image](https://github.com/user-attachments/assets/c8c8018c-d134-497a-9ecf-b981e024a1da)
+
 
 
