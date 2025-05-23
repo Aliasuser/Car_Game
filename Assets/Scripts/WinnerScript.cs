@@ -98,10 +98,12 @@ public class WinnerScript : MonoBehaviour
 
     }
 
-    string FormatTime(float timeInS) //Formatē taimera laiku redzāmākā veidā
+    string FormatTime(float secondsTime) //Formatē taimera laiku redzāmākā veidā
     {
-        int s = Mathf.FloorToInt(timeInS);
-        int ms = Mathf.FloorToInt((timeInS - s) * 100);
-        return string.Format("{0}.{1:00}s", s, ms);
+        int totalTime = Mathf.FloorToInt(secondsTime);
+        int hours = totalTime / 3600;
+        int min = (totalTime % 3600)/60;
+        int sec = totalTime % 60;
+        return string.Format("{0:00}:{1:00}:{2:00}",hours, min, sec);
     }
 }
